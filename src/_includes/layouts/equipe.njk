@@ -1,0 +1,46 @@
+---
+layout: layouts/base.njk
+---
+<article class="article" style="max-width:900px">
+  <p class="article__meta">{{ categorie }}</p>
+  <h1 style="font-size:clamp(2rem,5vw,3rem)">{{ title }}</h1>
+
+  {% if photo %}
+  <img src="{{ photo }}" alt="{{ title }}" style="width:100%;max-height:420px;object-fit:cover;border-radius:2px;margin:1.5rem 0">
+  {% endif %}
+
+  <div class="article__body">
+    {{ content | safe }}
+  </div>
+
+  {% if membres and membres.length > 0 %}
+  <h2 style="font-size:1.5rem;margin-top:2.5rem">Effectif</h2>
+  <div class="villages-map">
+    {% for m in membres %}
+    <span>{{ m }}</span>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  {% if resultats and resultats.length > 0 %}
+  <h2 style="font-size:1.5rem;margin-top:2.5rem">Résultats</h2>
+  <table class="creneaux-table">
+    <thead><tr><th>Date</th><th>Adversaire</th><th>Lieu</th><th>Score</th><th>Résultat</th></tr></thead>
+    <tbody>
+      {% for r in resultats %}
+      <tr>
+        <td>{{ r.date | dateFrCourt }}</td>
+        <td>{{ r.adversaire }}</td>
+        <td>{{ r.lieu }}</td>
+        <td>{{ r.score }}</td>
+        <td>{{ r.resultat }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% endif %}
+
+  <p style="margin-top:3rem">
+    <a href="/equipes/" class="btn btn--dark">← Retour aux équipes</a>
+  </p>
+</article>
