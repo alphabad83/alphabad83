@@ -9,17 +9,18 @@
     "Saint-Paul-en-Forêt"
   ],
   "accroche": "Le badminton associatif du Pays de Fayence",
-  "telephone": "06 00 00 00 00",
+  "telephone": "+33 6 82 19 83 76",
   "nomLong": "Association de Badminton du Canton de Fayence",
-  "adressePostale": "Salle omnisports, Chemin des Sports, 83440 Fayence",
+  "adressePostale": "Gymnase de Fayence et Montauroux",
+  "logo": "/images/uploads/image__1_-removebg-preview-1-.png",
   "nom": "ALPHABAD 83",
-  "ffbadClubUrl": "",
-  "descriptionCourte": "Alphabad 83 réunit les joueuses et joueurs de badminton des sept communes du Canton de Fayence, du loisir du jeudi soir jusqu'aux compétitions départementales.",
-  "adhesionUrl": "",
-  "email": "contact@alphabad83.fr",
+  "ffbadClubUrl": "https://myffbad.fr/club/1007",
+  "descriptionCourte": "Alphabad 83 réunit les joueuses et joueurs de badminton des sept communes du Canton de Fayence, du loisir jusqu'aux compétitions .",
+  "adhesionUrl": "https://www.myffbad.fr/adherer/ALPHABAD83",
+  "email": "alphabad.minton@orange.fr",
   "reseaux": {
-    "facebook": "https://www.facebook.com/",
-    "instagram": "https://www.instagram.com/",
+    "facebook": "",
+    "instagram": "https://www.instagram.com/alphabad_83?igsh=cXJmMWh0b2lxd2cx&utm_source=qr",
     "discord": ""
   }
 }
