@@ -2,31 +2,31 @@
   "items": [
     {
       "jour": "Lundi",
-      "horaire": "19h00 - 21h00",
-      "lieu": "Gymnase de Fayence",
-      "public": "Loisir - tous niveaux",
-      "commune": "Fayence"
+      "horaire": "19h00 - 20h45",
+      "lieu": "Gymnase Léonard de Vinci",
+      "public": "Entraînement - 1 terrain / Jeu libre - 3 terrains",
+      "commune": "MONTAUROUX"
     },
     {
-      "jour": "Mercredi",
-      "horaire": "18h00 - 19h30",
-      "lieu": "Gymnase de Montauroux",
-      "public": "Jeunes (8-15 ans)",
-      "commune": "Montauroux"
+      "jour": "Lundi",
+      "horaire": "20h45 - 23h00",
+      "lieu": "Gymnase Léonard de Vinci",
+      "public": "Jeu libre - 7 terrains",
+      "commune": "MONTAUROUX"
     },
     {
       "jour": "Jeudi",
-      "horaire": "19h30 - 22h00",
-      "lieu": "Gymnase de Fayence",
-      "public": "Loisir & compétition",
-      "commune": "Fayence"
+      "horaire": "18h30 - 20h30",
+      "lieu": "Gymnase Marie Mauron",
+      "public": "Entraînement - 3 terrains / Jeu libre - 4 terrains",
+      "commune": "FAYENCE"
     },
     {
-      "jour": "Samedi",
-      "horaire": "10h00 - 12h00",
-      "lieu": "Gymnase de Callian",
-      "public": "Loisir - tous niveaux",
-      "commune": "Callian"
+      "jour": "Jeudi",
+      "horaire": "20h30 - 21h00",
+      "lieu": "Gymnase Marie Mauron",
+      "public": "Jeu libre - 3 terrains",
+      "commune": "FAYENCE"
     }
   ]
 }
