@@ -1,28 +1,22 @@
 {
   "membres": [
     {
-      "nom": "Prénom Nom",
+      "nom": "DEVEZE Corinne",
       "role": "Présidente",
       "photo": "/images/membre-placeholder.svg",
-      "email": "presidente@alphabad83.fr"
+      "email": ""
     },
     {
-      "nom": "Prénom Nom",
-      "role": "Trésorier",
-      "photo": "/images/membre-placeholder.svg",
-      "email": "tresorier@alphabad83.fr"
-    },
-    {
-      "nom": "Prénom Nom",
+      "nom": "THAN Jade",
       "role": "Secrétaire",
       "photo": "/images/membre-placeholder.svg",
-      "email": "secretaire@alphabad83.fr"
+      "email": ""
     },
     {
-      "nom": "Prénom Nom",
-      "role": "Responsable sportif",
+      "nom": "ENGEL Philippe",
+      "role": "Trésorier",
       "photo": "/images/membre-placeholder.svg",
-      "email": "sport@alphabad83.fr"
+      "email": ""
     }
   ]
 }
