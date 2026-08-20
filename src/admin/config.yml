@@ -40,4 +40,143 @@ collections:
               - { label: "Instagram (lien complet)", name: "instagram", widget: "string", required: false }
               - { label: "Discord (lien complet)", name: "discord", widget: "string", required: false }
           - { label: "Lien d'adhésion en ligne (si existant)", name: "adhesionUrl", widget: "string", required: false }
-          - { label:
+          - { label: "Lien fiche club FFBaD (si existant)", name: "ffbadClubUrl", widget: "string", required: false }
+
+      - name: "bureau"
+        label: "Bureau / comité"
+        file: "src/_data/bureau.json"
+        fields:
+          - label: "Membres"
+            name: "membres"
+            widget: "list"
+            fields:
+              - { label: "Nom", name: "nom", widget: "string" }
+              - { label: "Rôle", name: "role", widget: "string" }
+              - { label: "Photo", name: "photo", widget: "image", required: false }
+              - { label: "E-mail", name: "email", widget: "string", required: false }
+
+      - name: "creneaux"
+        label: "Créneaux d'entraînement"
+        file: "src/_data/creneaux.json"
+        fields:
+          - label: "Créneaux"
+            name: "items"
+            widget: "list"
+            fields:
+              - label: "Jour"
+                name: "jour"
+                widget: "select"
+                options: ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"]
+              - { label: "Horaire (ex. 19h00 - 21h00)", name: "horaire", widget: "string" }
+              - { label: "Lieu / gymnase", name: "lieu", widget: "string" }
+              - { label: "Public visé", name: "public", widget: "string" }
+              - { label: "Commune", name: "commune", widget: "string" }
+
+      - name: "tarifs"
+        label: "Tarifs d'adhésion"
+        file: "src/_data/tarifs.json"
+        fields:
+          - label: "Tarifs"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Catégorie", name: "categorie", widget: "string" }
+              - { label: "Prix", name: "prix", widget: "string" }
+              - { label: "Détail", name: "detail", widget: "text" }
+
+  - name: "boutique"
+    label: "Boutique"
+    files:
+      - name: "produits"
+        label: "Produits en vente"
+        file: "src/_data/boutique.json"
+        fields:
+          - label: "Produits"
+            name: "produits"
+            widget: "list"
+            fields:
+              - { label: "Nom du produit", name: "nom", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Prix affiché (ex. 18 €)", name: "prixAffiche", widget: "string" }
+              - { label: "Identifiant de prix Stripe (price_...)", name: "stripePriceId", widget: "string", required: false, hint: "À copier depuis votre tableau de bord Stripe, dans la fiche du produit. Voir le README pour la marche à suivre." }
+              - { label: "Photo", name: "image", widget: "image", required: false }
+              - { label: "En vente actuellement", name: "disponible", widget: "boolean", default: false, hint: "Cochez seulement une fois l'identifiant de prix Stripe renseigné." }
+
+  - name: "legal"
+    label: "Informations légales"
+    files:
+      - name: "legal"
+        label: "Mentions légales & CGV"
+        file: "src/_data/legal.json"
+        fields:
+          - { label: "Dénomination de l'association", name: "denominationAssociation", widget: "string" }
+          - { label: "Forme juridique", name: "formeJuridique", widget: "string" }
+          - { label: "Adresse du siège social", name: "siegeSocial", widget: "string" }
+          - { label: "Numéro RNA (récépissé préfecture)", name: "numeroRna", widget: "string" }
+          - { label: "SIRET (si applicable)", name: "siret", widget: "string", required: false }
+          - { label: "Nom du représentant légal", name: "nomRepresentantLegal", widget: "string" }
+          - { label: "E-mail de contact légal", name: "emailContact", widget: "string" }
+          - { label: "Délai et modalité de remise des articles boutique", name: "delaiRemiseArticles", widget: "string" }
+          - { label: "Nom du médiateur de la consommation", name: "medateurNom", widget: "string", required: false, hint: "Obligation légale pour tout vendeur en ligne — voir README." }
+          - { label: "Site du médiateur", name: "medateurSite", widget: "string", required: false }
+          - { label: "Nom de l'hébergeur du site", name: "hebergeurNom", widget: "string" }
+          - { label: "Adresse de l'hébergeur", name: "hebergeurAdresse", widget: "string" }
+          - { label: "Site de l'hébergeur", name: "hebergeurSite", widget: "string" }
+          - { label: "Prestataire de paiement", name: "prestatairePaiement", widget: "string" }
+
+  - name: "actualites"
+    label: "Actualités"
+    folder: "src/actualites"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: title
+    fields:
+      - { label: "Titre", name: "title", widget: "string" }
+      - { label: "Date de publication", name: "date", widget: "datetime" }
+      - { label: "Résumé (affiché dans les listes)", name: "resume", widget: "text" }
+      - { label: "Contenu", name: "body", widget: "markdown" }
+
+  - name: "tournois"
+    label: "Tournois & interclubs"
+    folder: "src/tournois"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: title
+    fields:
+      - { label: "Titre", name: "title", widget: "string" }
+      - { label: "Date de publication de l'annonce", name: "date", widget: "datetime" }
+      - { label: "Date de l'événement", name: "dateEvenement", widget: "datetime" }
+      - { label: "Lieu", name: "lieu", widget: "string" }
+      - { label: "Résumé (affiché dans les listes)", name: "resume", widget: "text" }
+      - { label: "Prix d'inscription affiché (ex. 12 €) — laisser vide si pas de billetterie en ligne", name: "prixInscription", widget: "string", required: false }
+      - { label: "Identifiant de prix Stripe (price_...) pour l'inscription en ligne", name: "stripePriceId", widget: "string", required: false, hint: "À renseigner uniquement si vous vendez l'inscription en ligne. Voir le README." }
+      - { label: "Contenu", name: "body", widget: "markdown" }
+
+  - name: "equipes"
+    label: "Équipes interclubs"
+    folder: "src/equipes"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: title
+    fields:
+      - { label: "Nom de l'équipe", name: "title", widget: "string" }
+      - { label: "Catégorie / poule", name: "categorie", widget: "string" }
+      - { label: "Photo d'équipe", name: "photo", widget: "image", required: false }
+      - { label: "Présentation (optionnel)", name: "body", widget: "markdown", required: false }
+      - label: "Membres"
+        name: "membres"
+        widget: "list"
+        required: false
+        fields:
+          - { label: "Nom", name: "nom", widget: "string" }
+          - { label: "Fonction (ex. Capitaine, Joueur)", name: "role", widget: "string", required: false }
+      - label: "Résultats"
+        name: "resultats"
+        widget: "list"
+        required: false
+        fields:
+          - { label: "Date", name: "date", widget: "datetime" }
+          - { label: "Adversaire", name: "adversaire", widget: "string" }
+          - { label: "Lieu", name: "lieu", widget: "select", options: ["Domicile", "Extérieur"] }
+          - { label: "Score", name: "score", widget: "string" }
+          - { label: "Résultat", name: "resultat", widget: "select", options: ["Victoire", "Défaite", "Match nul"] }
