@@ -6,6 +6,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/_redirects": "_redirects" });
 
   // Collections
+    eleventyConfig.addCollection("equipes", (api) =>
+     api.getFilteredByGlob("src/equipes/*.md").sort((a, b) => a.data.title.localeCompare(b.data.title))
+   );
   eleventyConfig.addCollection("actualites", (api) =>
     api.getFilteredByGlob("src/actualites/*.md").sort((a, b) => b.date - a.date)
   );
