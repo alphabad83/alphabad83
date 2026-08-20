@@ -1,13 +1,17 @@
 <header class="site-header">
   <div class="wrap site-header__inner">
     <a href="/" class="brand">
-      <span class="brand__mark" aria-hidden="true">
-        <svg viewBox="0 0 40 40" width="34" height="34">
-          <circle cx="20" cy="20" r="19" fill="none" stroke="currentColor" stroke-width="1.5"/>
-          <path d="M9 27 L28 9" stroke="currentColor" stroke-width="1.5" fill="none"/>
-          <circle cx="28" cy="9" r="3" fill="currentColor"/>
-        </svg>
-      </span>
+        <span class="brand__mark" aria-hidden="true">
+     {% if club.logo %}
+       <img src="{{ club.logo }}" alt="" width="34" height="34" style="object-fit:contain">
+     {% else %}
+       <svg viewBox="0 0 40 40" width="34" height="34">
+         <circle cx="20" cy="20" r="19" fill="none" stroke="currentColor" stroke-width="1.5"/>
+         <path d="M9 27 L28 9" stroke="currentColor" stroke-width="1.5" fill="none"/>
+         <circle cx="28" cy="9" r="3" fill="currentColor"/>
+       </svg>
+     {% endif %}
+   </span>
       <span class="brand__text">
         <span class="brand__name">Alphabad<span class="brand__accent">83</span></span>
         <span class="brand__sub">Canton de Fayence</span>
