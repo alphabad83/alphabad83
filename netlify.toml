@@ -1,0 +1,14 @@
+[build]
+  command = "npm run build"
+  publish = "_site"
+  functions = "netlify/functions"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# Nécessaire pour que le formulaire de contact (Netlify Forms) fonctionne
+# Le formulaire est déjà détecté automatiquement via data-netlify="true" dans contact.njk
+
+# Le paiement (boutique + billetterie) passe par une fonction serveur Stripe.
+# La clé secrète Stripe se configure dans Netlify → Site configuration →
+# Environment variables → STRIPE_SECRET_KEY (jamais dans le code du site).

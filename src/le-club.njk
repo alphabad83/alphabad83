@@ -1,0 +1,64 @@
+---
+layout: layouts/base.njk
+title: Le club
+permalink: /le-club/
+---
+<section class="hero" style="padding-bottom:3.5rem">
+  <div class="wrap">
+    <p class="eyebrow hero__eyebrow">Association loi 1901</p>
+    <h1 class="hero__title">Le club</h1>
+    <p class="hero__lead">{{ club.nomLong }}</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap grid grid--2" style="align-items:start">
+    <div>
+      <h2>Notre histoire</h2>
+      <p>Alphabad 83 est né de la volonté de quelques passionnés de badminton du Pays de Fayence de proposer une pratique accessible à toutes les générations, du loisir du jeudi soir aux rencontres interclubs départementales.</p>
+      <p>Le club s'appuie sur le maillage des sept communes du canton pour proposer plusieurs créneaux d'entraînement, encadrés par des bénévoles et, selon les saisons, des éducateurs diplômés.</p>
+    </div>
+    <div>
+      <h2>Nos valeurs</h2>
+      <p><strong>Convivialité</strong> — le badminton se joue et se vit ensemble, quel que soit le niveau.</p>
+      <p><strong>Accessibilité</strong> — des créneaux répartis sur le territoire pour limiter les trajets.</p>
+      <p><strong>Progression</strong> — un encadrement adapté aux jeunes comme aux compétiteurs.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section--stone">
+  <div class="wrap">
+    <div class="section__head">
+      <div>
+        <p class="eyebrow">Bureau</p>
+        <h2>Le comité directeur</h2>
+      </div>
+      <p>L'équipe bénévole qui fait vivre le club au quotidien : administration, encadrement sportif et organisation des événements.</p>
+    </div>
+    <div class="grid grid--2">
+      {% for m in bureau.membres %}
+      <div class="card membre">
+        <img src="{{ m.photo }}" alt="" loading="lazy">
+        <div>
+          <p class="membre__role">{{ m.role }}</p>
+          <h3 style="text-transform:none;letter-spacing:0;font-size:1.15rem;margin-bottom:0.2em">{{ m.nom }}</h3>
+          {% if m.email %}<a href="mailto:{{ m.email }}" style="font-family:var(--font-mono);font-size:0.85rem">{{ m.email }}</a>{% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section--navy">
+  <div class="wrap">
+    <p class="eyebrow">Le territoire</p>
+    <h2>Un club à l'échelle du canton</h2>
+    <div class="villages-map">
+      {% for ville in club.villes %}
+      <span style="background:transparent;border-color:rgba(255,255,255,0.25);color:var(--stone-light)">{{ ville }}</span>
+      {% endfor %}
+    </div>
+  </div>
+</section>

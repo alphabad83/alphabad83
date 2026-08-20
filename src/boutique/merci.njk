@@ -1,0 +1,21 @@
+---
+layout: layouts/base.njk
+title: Merci pour votre commande
+permalink: /boutique/merci/
+---
+<section class="hero" style="padding-bottom:4rem">
+  <div class="wrap">
+    <p class="eyebrow hero__eyebrow">Paiement confirmé</p>
+    <h1 class="hero__title">Merci !</h1>
+    <p class="hero__lead">Votre commande a bien été enregistrée. Vous recevrez une confirmation par e-mail de la part de Stripe.</p>
+    <div class="hero__actions">
+      <a href="/" class="btn btn--primary">Retour à l'accueil</a>
+      <a href="/boutique/" class="btn btn--ghost">Continuer mes achats</a>
+    </div>
+  </div>
+</section>
+
+<script>
+  // La commande est confirmée : on vide le panier stocké dans ce navigateur.
+  localStorage.removeItem("alphabad83_panier");
+</script>

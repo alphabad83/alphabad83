@@ -1,0 +1,60 @@
+---
+layout: layouts/base.njk
+title: Créneaux & tarifs
+permalink: /creneaux-tarifs/
+---
+<section class="hero" style="padding-bottom:3.5rem">
+  <div class="wrap">
+    <p class="eyebrow hero__eyebrow">Infos pratiques</p>
+    <h1 class="hero__title">Créneaux &amp; tarifs</h1>
+    <p class="hero__lead">Tous les horaires d'entraînement de la saison, réparti dans les gymnases du canton.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <h2>Les créneaux d'entraînement</h2>
+    <table class="creneaux-table">
+      <thead>
+        <tr><th>Jour</th><th>Horaire</th><th>Lieu</th><th>Commune</th><th>Public</th></tr>
+      </thead>
+      <tbody>
+        {% for c in creneaux.items %}
+        <tr>
+          <td>{{ c.jour }}</td>
+          <td>{{ c.horaire }}</td>
+          <td>{{ c.lieu }}</td>
+          <td>{{ c.commune }}</td>
+          <td>{{ c.public }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <p style="margin-top:1.5rem;opacity:0.75;font-size:0.92rem">Séance découverte gratuite : présentez-vous directement sur l'un des créneaux ci-dessus, raquette prêtée sur place.</p>
+  </div>
+</section>
+
+<section class="section section--stone">
+  <div class="wrap">
+    <div class="section__head">
+      <div>
+        <p class="eyebrow">Adhésion</p>
+        <h2>Tarifs de la saison</h2>
+      </div>
+      <p>Cotisation annuelle, licence FFBaD comprise. Paiement en 1, 2 ou 3 fois possible.</p>
+    </div>
+    <div class="grid grid--2">
+      {% for t in tarifs.items %}
+      <div class="card">
+        <p class="membre__role">{{ t.categorie }}</p>
+        <h3 style="text-transform:none;letter-spacing:0;font-family:var(--font-mono);font-weight:600">{{ t.prix }}</h3>
+        <p style="opacity:0.8;font-size:0.95rem;margin-bottom:0">{{ t.detail }}</p>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="hero__actions" style="margin-top:2.5rem">
+      <a href="/contact/" class="btn btn--dark">Nous contacter pour adhérer</a>
+      {% if club.adhesionUrl %}<a href="{{ club.adhesionUrl }}" class="btn btn--dark" target="_blank" rel="noopener">Adhérer en ligne</a>{% endif %}
+    </div>
+  </div>
+</section>

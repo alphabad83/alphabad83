@@ -1,0 +1,52 @@
+---
+layout: layouts/base.njk
+title: Contact
+permalink: /contact/
+---
+<section class="hero" style="padding-bottom:3.5rem">
+  <div class="wrap">
+    <p class="eyebrow hero__eyebrow">Nous rejoindre</p>
+    <h1 class="hero__title">Contact</h1>
+    <p class="hero__lead">Une question, envie d'essayer, ou de rejoindre le bureau ? Écrivez-nous.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap grid grid--2" style="align-items:start">
+    <div class="card">
+      <h2 style="font-size:1.5rem">Écrivez-nous</h2>
+      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact">
+        <p class="sr-only"><label>Ne pas remplir : <input name="bot-field"></label></p>
+        <p>
+          <label for="nom" style="font-family:var(--font-mono);font-size:0.8rem;text-transform:uppercase;letter-spacing:0.06em;display:block;margin-bottom:0.4em">Nom</label>
+          <input id="nom" name="nom" type="text" required style="width:100%;padding:0.7em;border:1px solid var(--line);border-radius:2px;font-family:var(--font-body)">
+        </p>
+        <p>
+          <label for="email" style="font-family:var(--font-mono);font-size:0.8rem;text-transform:uppercase;letter-spacing:0.06em;display:block;margin-bottom:0.4em">E-mail</label>
+          <input id="email" name="email" type="email" required style="width:100%;padding:0.7em;border:1px solid var(--line);border-radius:2px;font-family:var(--font-body)">
+        </p>
+        <p>
+          <label for="message" style="font-family:var(--font-mono);font-size:0.8rem;text-transform:uppercase;letter-spacing:0.06em;display:block;margin-bottom:0.4em">Message</label>
+          <textarea id="message" name="message" rows="5" required style="width:100%;padding:0.7em;border:1px solid var(--line);border-radius:2px;font-family:var(--font-body)"></textarea>
+        </p>
+        <button type="submit" class="btn btn--primary">Envoyer</button>
+      </form>
+    </div>
+
+    <div>
+      <h2 style="font-size:1.5rem">Coordonnées</h2>
+      <ul style="list-style:none;padding:0;margin:0 0 2rem">
+        <li style="margin-bottom:0.8rem"><strong>E-mail :</strong> <a href="mailto:{{ club.email }}">{{ club.email }}</a></li>
+        <li style="margin-bottom:0.8rem"><strong>Téléphone :</strong> {{ club.telephone }}</li>
+        <li style="margin-bottom:0.8rem"><strong>Adresse :</strong> {{ club.adressePostale }}</li>
+      </ul>
+      <h3 style="font-size:1.1rem;text-transform:none;letter-spacing:0">Sur les réseaux</h3>
+      <ul style="list-style:none;padding:0">
+        {% if club.reseaux.facebook %}<li style="margin-bottom:0.5rem"><a href="{{ club.reseaux.facebook }}" target="_blank" rel="noopener">Facebook →</a></li>{% endif %}
+        {% if club.reseaux.instagram %}<li style="margin-bottom:0.5rem"><a href="{{ club.reseaux.instagram }}" target="_blank" rel="noopener">Instagram →</a></li>{% endif %}
+        {% if club.reseaux.discord %}<li style="margin-bottom:0.5rem"><a href="{{ club.reseaux.discord }}" target="_blank" rel="noopener">Discord →</a></li>{% endif %}
+      </ul>
+    </div>
+  </div>
+</section>

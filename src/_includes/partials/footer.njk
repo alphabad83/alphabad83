@@ -1,0 +1,46 @@
+<footer class="site-footer">
+  <div class="wrap">
+
+    <div class="circuit" aria-label="Communes du Canton de Fayence couvertes par le club">
+      <p class="circuit__label">Le circuit du club</p>
+      <ol class="circuit__route">
+        {% for ville in club.villes %}
+        <li class="circuit__stop">
+          <span class="circuit__dot" aria-hidden="true"></span>
+          <span>{{ ville }}</span>
+        </li>
+        {% endfor %}
+      </ol>
+    </div>
+
+    <div class="site-footer__grid">
+      <div>
+        <p class="site-footer__brand">Alphabad<span class="brand__accent">83</span></p>
+        <p class="site-footer__desc">{{ club.descriptionCourte }}</p>
+      </div>
+
+      <div>
+        <p class="site-footer__heading">Contact</p>
+        <ul class="site-footer__list">
+          <li><a href="mailto:{{ club.email }}">{{ club.email }}</a></li>
+          <li>{{ club.telephone }}</li>
+          <li>{{ club.adressePostale }}</li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="site-footer__heading">Suivre le club</p>
+        <ul class="site-footer__list">
+          {% if club.reseaux.facebook %}<li><a href="{{ club.reseaux.facebook }}" target="_blank" rel="noopener">Facebook</a></li>{% endif %}
+          {% if club.reseaux.instagram %}<li><a href="{{ club.reseaux.instagram }}" target="_blank" rel="noopener">Instagram</a></li>{% endif %}
+          {% if club.reseaux.discord %}<li><a href="{{ club.reseaux.discord }}" target="_blank" rel="noopener">Discord</a></li>{% endif %}
+        </ul>
+      </div>
+    </div>
+
+    <p class="site-footer__legal">© {{ year }} {{ club.nomLong }} — Association loi 1901.
+      <a href="/mentions-legales/" style="opacity:0.8">Mentions légales</a> ·
+      <a href="/cgv/" style="opacity:0.8">CGV</a>
+    </p>
+  </div>
+</footer>

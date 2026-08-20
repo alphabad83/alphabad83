@@ -1,0 +1,25 @@
+---
+layout: layouts/base.njk
+---
+<article class="article">
+  <p class="article__meta">
+    {% if dateEvenement %}{{ dateEvenement | dateFr }}{% else %}{{ date | dateFr }}{% endif %}
+  </p>
+  <h1 style="font-size:clamp(2rem,5vw,3rem)">{{ title }}</h1>
+  {% if lieu %}<p style="opacity:0.75"><strong>Lieu :</strong> {{ lieu }}</p>{% endif %}
+
+  {% if stripePriceId and prixInscription %}
+  <div class="card" style="margin:2rem 0">
+    <p class="membre__role">Inscription</p>
+    <p style="font-family:var(--font-mono);font-weight:600;font-size:1.3rem;margin-bottom:1em">{{ prixInscription }}</p>
+    <button type="button" class="btn btn--primary" data-buy-now data-price-id="{{ stripePriceId }}">S'inscrire et payer</button>
+  </div>
+  {% endif %}
+
+  <div class="article__body">
+    {{ content | safe }}
+  </div>
+  <p style="margin-top:3rem">
+    <a href="{% if tags and 'tournois' in tags %}/tournois/{% else %}/actualites/{% endif %}" class="btn btn--dark">← Retour à la liste</a>
+  </p>
+</article>

@@ -1,0 +1,36 @@
+---
+layout: layouts/base.njk
+title: Boutique
+permalink: /boutique/
+---
+<section class="hero" style="padding-bottom:3.5rem">
+  <div class="wrap">
+    <p class="eyebrow hero__eyebrow">Boutique du club</p>
+    <h1 class="hero__title">Boutique</h1>
+    <p class="hero__lead">Volants, cordage, maillots — paiement sécurisé par carte bancaire via Stripe.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="grid grid--3">
+      {% for p in boutique.produits %}
+      <div class="card">
+        <img src="{{ p.image }}" alt="" loading="lazy" style="margin-bottom:1rem;border-radius:2px">
+        <h3 style="text-transform:none;letter-spacing:0;font-size:1.2rem">{{ p.nom }}</h3>
+        <p style="opacity:0.8;font-size:0.95rem">{{ p.description }}</p>
+        <p style="font-family:var(--font-mono);font-weight:600;margin-bottom:1.2em">{{ p.prixAffiche }}</p>
+        {% if p.disponible and p.stripePriceId %}
+        <button type="button" class="btn btn--dark"
+          data-add-to-cart
+          data-price-id="{{ p.stripePriceId }}"
+          data-nom="{{ p.nom }}"
+          data-prix="{{ p.prixAffiche }}">Ajouter au panier</button>
+        {% else %}
+        <span class="btn btn--dark" style="opacity:0.4;pointer-events:none">Bientôt disponible</span>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

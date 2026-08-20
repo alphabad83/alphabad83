@@ -1,0 +1,28 @@
+{
+  "membres": [
+    {
+      "nom": "Prénom Nom",
+      "role": "Présidente",
+      "photo": "/images/membre-placeholder.svg",
+      "email": "presidente@alphabad83.fr"
+    },
+    {
+      "nom": "Prénom Nom",
+      "role": "Trésorier",
+      "photo": "/images/membre-placeholder.svg",
+      "email": "tresorier@alphabad83.fr"
+    },
+    {
+      "nom": "Prénom Nom",
+      "role": "Secrétaire",
+      "photo": "/images/membre-placeholder.svg",
+      "email": "secretaire@alphabad83.fr"
+    },
+    {
+      "nom": "Prénom Nom",
+      "role": "Responsable sportif",
+      "photo": "/images/membre-placeholder.svg",
+      "email": "sport@alphabad83.fr"
+    }
+  ]
+}

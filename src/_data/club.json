@@ -1,0 +1,25 @@
+{
+  "nom": "Alphabad 83",
+  "nomLong": "Association de Badminton du Canton de Fayence",
+  "accroche": "Le badminton associatif du Pays de Fayence",
+  "descriptionCourte": "Alphabad 83 réunit les joueuses et joueurs de badminton des sept communes du Canton de Fayence, du loisir du jeudi soir jusqu'aux compétitions départementales.",
+  "email": "contact@alphabad83.fr",
+  "telephone": "06 00 00 00 00",
+  "adressePostale": "Salle omnisports, Chemin des Sports, 83440 Fayence",
+  "villes": [
+    "Fayence",
+    "Tourrettes",
+    "Callian",
+    "Montauroux",
+    "Seillans",
+    "Mons",
+    "Saint-Paul-en-Forêt"
+  ],
+  "reseaux": {
+    "facebook": "https://www.facebook.com/",
+    "instagram": "https://www.instagram.com/",
+    "discord": ""
+  },
+  "adhesionUrl": "",
+  "ffbadClubUrl": ""
+}

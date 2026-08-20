@@ -1,0 +1,133 @@
+---
+layout: layouts/base.njk
+title: Accueil
+permalink: /
+---
+<section class="hero">
+  <svg class="hero__court" viewBox="0 0 1200 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <rect x="30" y="30" width="1140" height="440" fill="none" stroke="#F8F4EA" stroke-opacity="0.12" stroke-width="2"/>
+    <line x1="30" y1="250" x2="1170" y2="250" stroke="#F8F4EA" stroke-opacity="0.12" stroke-width="2"/>
+    <line x1="600" y1="30" x2="600" y2="470" stroke="#F8F4EA" stroke-opacity="0.12" stroke-width="2"/>
+    <rect x="160" y="30" width="880" height="440" fill="none" stroke="#F8F4EA" stroke-opacity="0.1" stroke-width="1.5"/>
+  </svg>
+  <div class="wrap hero__inner">
+    <div>
+      <p class="eyebrow hero__eyebrow">Canton de Fayence · Var</p>
+      <h1 class="hero__title">Le badminton<br>du <span class="stroke">Pays de Fayence</span></h1>
+      <p class="hero__lead">{{ club.descriptionCourte }}</p>
+      <div class="hero__actions">
+        <a href="/contact/" class="btn btn--primary">Nous rejoindre</a>
+        <a href="/creneaux-tarifs/" class="btn btn--ghost">Voir les créneaux</a>
+      </div>
+    </div>
+    <div class="hero__trajectory">
+      <svg viewBox="0 0 400 400" width="100%" height="100%">
+        <path d="M40,360 C120,120 280,60 370,40" fill="none" stroke="#D7E24C" stroke-width="2.5" stroke-dasharray="6 8"/>
+        <circle cx="40" cy="360" r="6" fill="#F8F4EA"/>
+        <g transform="translate(370,40)">
+          <circle r="16" fill="#F8F4EA"/>
+          <path d="M0,-16 L-9,-30 M0,-16 L9,-30 M0,-16 L-13,-24 M0,-16 L13,-24" stroke="#A83E1D" stroke-width="2"/>
+        </g>
+        <text x="20" y="390" fill="#F8F4EA" font-family="JetBrains Mono" font-size="11" opacity="0.6">SMASH</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="section section--stone">
+  <div class="wrap">
+    <div class="section__head">
+      <div>
+        <p class="eyebrow">Sept communes, un seul club</p>
+        <h2>On joue partout dans le canton</h2>
+      </div>
+      <p>Alphabad 83 fait vivre le badminton sur l'ensemble du Canton de Fayence : entraînements répartis dans plusieurs gymnases pour rester proche de chez vous.</p>
+    </div>
+    <div class="villages-map">
+      {% for ville in club.villes %}
+      <span>{{ ville }}</span>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section__head">
+      <div>
+        <p class="eyebrow">Cette semaine</p>
+        <h2>Créneaux d'entraînement</h2>
+      </div>
+      <a href="/creneaux-tarifs/" class="btn btn--dark">Tous les créneaux et tarifs</a>
+    </div>
+    <table class="creneaux-table">
+      <thead>
+        <tr><th>Jour</th><th>Horaire</th><th>Lieu</th><th>Public</th></tr>
+      </thead>
+      <tbody>
+        {% for c in creneaux.items %}
+        <tr>
+          <td>{{ c.jour }}</td>
+          <td>{{ c.horaire }}</td>
+          <td>{{ c.lieu }}</td>
+          <td>{{ c.public }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>
+
+{% if collections.actualites.length > 0 %}
+<section class="section section--stone">
+  <div class="wrap">
+    <div class="section__head">
+      <div>
+        <p class="eyebrow">Vie du club</p>
+        <h2>Dernières actualités</h2>
+      </div>
+      <a href="/actualites/" class="btn btn--dark">Toutes les actualités</a>
+    </div>
+    <div class="grid grid--3">
+      {% for post in collections.actualites | reverse %}
+      {% if loop.index <= 3 %}
+      <a class="card post-card" href="{{ post.url }}">
+        <p class="post-card__date">{{ post.data.date | dateFr }}</p>
+        <h3>{{ post.data.title }}</h3>
+        <p>{{ post.data.resume }}</p>
+      </a>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<section class="section section--navy">
+  <div class="wrap">
+    <div class="section__head">
+      <div>
+        <p class="eyebrow">Envie d'essayer ?</p>
+        <h2>Une première séance, ça se fait à la volée</h2>
+      </div>
+    </div>
+    <div class="grid grid--3">
+      <div class="card">
+        <h3>1. Venez essayer</h3>
+        <p>Présentez-vous à l'un de nos créneaux, raquette prêtée sur place, aucune inscription préalable nécessaire.</p>
+      </div>
+      <div class="card">
+        <h3>2. Rencontrez le club</h3>
+        <p>Échangez avec les membres du bureau et les joueurs sur l'ambiance, les niveaux et le calendrier de la saison.</p>
+      </div>
+      <div class="card">
+        <h3>3. Adhérez</h3>
+        <p>Licence FFBaD et cotisation à régler en début de saison, tarifs réduits pour les jeunes et les familles.</p>
+      </div>
+    </div>
+    <div class="hero__actions" style="margin-top:2.5rem">
+      <a href="/contact/" class="btn btn--primary">Nous contacter</a>
+      <a href="/le-club/" class="btn btn--ghost">Découvrir le club</a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,91 @@
+---
+layout: layouts/base.njk
+title: Conditions générales de vente
+permalink: /cgv/
+---
+<section class="hero" style="padding-bottom:3.5rem">
+  <div class="wrap">
+    <p class="eyebrow hero__eyebrow">Boutique &amp; billetterie</p>
+    <h1 class="hero__title">Conditions générales de vente</h1>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap" style="max-width:72ch">
+
+    <h2>Article 1 — Objet et champ d'application</h2>
+    <p>
+      Les présentes conditions générales de vente régissent les ventes réalisées sur le site de
+      {{ legal.denominationAssociation }} ({{ legal.formeJuridique | lower }}, {{ legal.siegeSocial }}) :
+      articles de la boutique du club (volants, cordage, maillots...) et inscriptions payantes à des tournois ou stages.
+      Toute commande passée sur ce site implique l'acceptation pleine et entière des présentes conditions.
+    </p>
+
+    <h2>Article 2 — Produits, prix et disponibilité</h2>
+    <p>
+      Les prix sont indiqués en euros, toutes taxes comprises le cas échéant. {{ club.nom }} se réserve le droit
+      de modifier ses prix à tout moment ; seul le prix affiché au moment de la commande fait foi.
+      Les produits sont proposés dans la limite des stocks disponibles.
+    </p>
+
+    <h2>Article 3 — Commande et paiement</h2>
+    <p>
+      Les commandes se passent directement en ligne. Le paiement s'effectue par carte bancaire, via la plateforme
+      sécurisée {{ legal.prestatairePaiement }}. La commande est considérée comme définitive après confirmation
+      du paiement par Stripe.
+    </p>
+
+    <h2>Article 4 — Retrait des articles de la boutique</h2>
+    <p>
+      Les articles de la boutique (volants, cordage, maillots) ne sont pas expédiés par voie postale : ils sont
+      remis en main propre {{ legal.delaiRemiseArticles }}. En cas d'indisponibilité prolongée, {{ club.nom }}
+      contactera l'acheteur pour convenir d'une autre modalité de remise ou procéder à un remboursement.
+    </p>
+
+    <h2>Article 5 — Inscriptions aux tournois et stages</h2>
+    <p>
+      L'inscription payante à un tournoi ou un stage donne accès à l'événement décrit sur la page correspondante,
+      à la date qui y est indiquée. En cas d'annulation de l'événement par {{ club.nom }}, les personnes inscrites
+      seront intégralement remboursées ou, à leur choix, verront leur inscription reportée sur un événement équivalent.
+    </p>
+
+    <h2>Article 6 — Droit de rétractation</h2>
+    <p>
+      Conformément à l'article L221-18 du Code de la consommation, vous disposez d'un délai de 14 jours à compter
+      de votre achat pour exercer votre droit de rétractation sur les articles de la boutique, sans avoir à justifier
+      de motif. L'article devra être retourné à l'état neuf.
+    </p>
+    <p>
+      Conformément à l'article L221-28 du Code de la consommation, ce droit de rétractation <strong>ne s'applique pas</strong>
+      aux inscriptions à un tournoi ou un stage, celles-ci constituant une prestation de service de loisirs fournie
+      à une date déterminée.
+    </p>
+
+    <h2>Article 7 — Médiation de la consommation</h2>
+    <p>
+      Conformément à l'article L616-1 du Code de la consommation, tout consommateur a le droit de recourir gratuitement
+      à un service de médiation de la consommation en cas de litige non résolu directement avec {{ club.nom }}.
+      {% if legal.medateurNom %}
+      Le médiateur compétent est : {{ legal.medateurNom }}{% if legal.medateurSite %} — <a href="{{ legal.medateurSite }}" target="_blank" rel="noopener">{{ legal.medateurSite }}</a>{% endif %}.
+      {% else %}
+      <em>(Médiateur à désigner — voir la note à l'attention du club ci-dessous.)</em>
+      {% endif %}
+    </p>
+
+    <h2>Article 8 — Droit applicable</h2>
+    <p>Les présentes conditions sont soumises au droit français.</p>
+
+    <p style="margin-top:3rem;font-size:0.85rem;opacity:0.7">
+      Voir aussi nos <a href="/mentions-legales/">mentions légales</a>.
+    </p>
+
+    <hr style="margin:3rem 0;border:none;border-top:1px solid var(--line)">
+    <p style="font-size:0.85rem;opacity:0.65">
+      <strong>Note à l'attention du bureau du club :</strong> ce texte est un modèle standard, à faire relire avant
+      publication. Point à vérifier en priorité : la désignation d'un médiateur de la consommation (Article 7)
+      est une obligation légale pour tout vendeur en ligne ; contactez votre fédération ou un conseil juridique pour
+      identifier le médiateur applicable à votre situation d'association.
+    </p>
+
+  </div>
+</section>

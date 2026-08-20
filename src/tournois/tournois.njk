@@ -1,0 +1,30 @@
+---
+layout: layouts/base.njk
+title: Tournois
+permalink: /tournois/
+---
+<section class="hero" style="padding-bottom:3.5rem">
+  <div class="wrap">
+    <p class="eyebrow hero__eyebrow">Compétition</p>
+    <h1 class="hero__title">Tournois &amp; interclubs</h1>
+    <p class="hero__lead">Le calendrier des tournois organisés par le club et des rencontres interclubs auxquelles nous participons.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    {% if collections.tournois.length > 0 %}
+    <div class="grid grid--3">
+      {% for post in collections.tournois %}
+      <a class="card post-card" href="{{ post.url }}">
+        <p class="post-card__date">{{ post.data.dateEvenement | dateFr }}</p>
+        <h3>{{ post.data.title }}</h3>
+        <p>{{ post.data.resume }}</p>
+      </a>
+      {% endfor %}
+    </div>
+    {% else %}
+    <p>Aucun tournoi programmé pour le moment.</p>
+    {% endif %}
+  </div>
+</section>

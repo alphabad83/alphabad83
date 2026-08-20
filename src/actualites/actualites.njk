@@ -1,0 +1,30 @@
+---
+layout: layouts/base.njk
+title: Actualités
+permalink: /actualites/
+---
+<section class="hero" style="padding-bottom:3.5rem">
+  <div class="wrap">
+    <p class="eyebrow hero__eyebrow">Vie du club</p>
+    <h1 class="hero__title">Actualités</h1>
+    <p class="hero__lead">Résultats, événements et informations de la saison.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    {% if collections.actualites.length > 0 %}
+    <div class="grid grid--3">
+      {% for post in collections.actualites %}
+      <a class="card post-card" href="{{ post.url }}">
+        <p class="post-card__date">{{ post.data.date | dateFr }}</p>
+        <h3>{{ post.data.title }}</h3>
+        <p>{{ post.data.resume }}</p>
+      </a>
+      {% endfor %}
+    </div>
+    {% else %}
+    <p>Aucune actualité publiée pour le moment.</p>
+    {% endif %}
+  </div>
+</section>

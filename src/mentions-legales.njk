@@ -1,0 +1,77 @@
+---
+layout: layouts/base.njk
+title: Mentions légales
+permalink: /mentions-legales/
+---
+<section class="hero" style="padding-bottom:3.5rem">
+  <div class="wrap">
+    <p class="eyebrow hero__eyebrow">Informations légales</p>
+    <h1 class="hero__title">Mentions légales</h1>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap" style="max-width:72ch">
+
+    <h2>Éditeur du site</h2>
+    <p>
+      Le présent site est édité par <strong>{{ legal.denominationAssociation }}</strong>, {{ legal.formeJuridique | lower }},
+      dont le siège social est situé {{ legal.siegeSocial }}.
+    </p>
+    <p>
+      Numéro RNA (répertoire national des associations) : {{ legal.numeroRna }}<br>
+      {% if legal.siret %}SIRET : {{ legal.siret }}<br>{% endif %}
+      Représentant légal : {{ legal.nomRepresentantLegal }}<br>
+      Contact : <a href="mailto:{{ legal.emailContact }}">{{ legal.emailContact }}</a>
+    </p>
+
+    <h2>Directeur de publication</h2>
+    <p>{{ legal.nomRepresentantLegal }}, en qualité de représentant légal de l'association.</p>
+
+    <h2>Hébergement du site</h2>
+    <p>
+      Le site est hébergé par <strong>{{ legal.hebergeurNom }}</strong>, {{ legal.hebergeurAdresse }}.<br>
+      Site de l'hébergeur : <a href="{{ legal.hebergeurSite }}" target="_blank" rel="noopener">{{ legal.hebergeurSite }}</a>
+    </p>
+
+    <h2>Paiement en ligne</h2>
+    <p>
+      Les paiements réalisés sur ce site (boutique, inscriptions aux tournois) sont traités par <strong>{{ legal.prestatairePaiement }}</strong>,
+      prestataire de services de paiement. {{ club.nom }} ne stocke ni ne traite directement les données de carte bancaire :
+      celles-ci sont saisies exclusivement sur les pages sécurisées de Stripe.
+    </p>
+
+    <h2>Propriété intellectuelle</h2>
+    <p>
+      L'ensemble des contenus présents sur ce site (textes, photos, logo) est la propriété de {{ club.nom }},
+      sauf mention contraire. Toute reproduction sans autorisation préalable est interdite.
+    </p>
+
+    <h2>Données personnelles</h2>
+    <p>
+      Ce site collecte uniquement les données nécessaires au traitement de votre demande de contact ou de votre commande
+      (nom, e-mail, contenu du message ; ou, pour un achat, les informations transmises directement à Stripe pour le paiement).
+      Ces données ne sont ni vendues ni transmises à des tiers en dehors des prestataires strictement nécessaires
+      au fonctionnement du site (hébergement, paiement).
+    </p>
+    <p>
+      Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez d'un droit d'accès, de rectification
+      et de suppression des données vous concernant. Pour l'exercer, écrivez à
+      <a href="mailto:{{ legal.emailContact }}">{{ legal.emailContact }}</a>.
+    </p>
+    <p>
+      Ce site n'utilise pas de cookies de suivi publicitaire ni d'outils d'analyse d'audience tiers.
+    </p>
+
+    <h2>Litiges</h2>
+    <p>
+      Le présent site est soumis au droit français. En cas de litige, une solution amiable sera recherchée en priorité
+      avant toute action judiciaire.
+    </p>
+
+    <p style="margin-top:3rem;font-size:0.85rem;opacity:0.7">
+      Voir aussi nos <a href="/cgv/">conditions générales de vente</a>.
+    </p>
+
+  </div>
+</section>

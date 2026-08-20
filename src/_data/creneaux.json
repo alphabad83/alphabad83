@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "jour": "Lundi",
+      "horaire": "19h00 - 21h00",
+      "lieu": "Gymnase de Fayence",
+      "public": "Loisir - tous niveaux",
+      "commune": "Fayence"
+    },
+    {
+      "jour": "Mercredi",
+      "horaire": "18h00 - 19h30",
+      "lieu": "Gymnase de Montauroux",
+      "public": "Jeunes (8-15 ans)",
+      "commune": "Montauroux"
+    },
+    {
+      "jour": "Jeudi",
+      "horaire": "19h30 - 22h00",
+      "lieu": "Gymnase de Fayence",
+      "public": "Loisir & compétition",
+      "commune": "Fayence"
+    },
+    {
+      "jour": "Samedi",
+      "horaire": "10h00 - 12h00",
+      "lieu": "Gymnase de Callian",
+      "public": "Loisir - tous niveaux",
+      "commune": "Callian"
+    }
+  ]
+}

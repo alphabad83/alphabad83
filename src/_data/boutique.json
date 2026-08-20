@@ -1,0 +1,28 @@
+{
+  "produits": [
+    {
+      "nom": "Tube de 3 volants plume",
+      "description": "Volants en plume, qualité entraînement, le tube de 3.",
+      "prixAffiche": "18 €",
+      "stripePriceId": "",
+      "image": "/images/produit-placeholder.svg",
+      "disponible": false
+    },
+    {
+      "nom": "Cordage raquette",
+      "description": "Cordage et tension au choix, pose sous une semaine.",
+      "prixAffiche": "15 €",
+      "stripePriceId": "",
+      "image": "/images/produit-placeholder.svg",
+      "disponible": false
+    },
+    {
+      "nom": "Maillot du club",
+      "description": "Maillot officiel Alphabad 83, toutes tailles.",
+      "prixAffiche": "25 €",
+      "stripePriceId": "",
+      "image": "/images/produit-placeholder.svg",
+      "disponible": false
+    }
+  ]
+}
