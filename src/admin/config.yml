@@ -151,3 +151,29 @@ collections:
       - { label: "Prix d'inscription affiché (ex. 12 €) — laisser vide si pas de billetterie en ligne", name: "prixInscription", widget: "string", required: false }
       - { label: "Identifiant de prix Stripe (price_...) pour l'inscription en ligne", name: "stripePriceId", widget: "string", required: false, hint: "À renseigner uniquement si vous vendez l'inscription en ligne. Voir le README." }
       - { label: "Contenu", name: "body", widget: "markdown" }
+
+  - name: "equipes"
+    label: "Équipes interclubs"
+    folder: "src/equipes"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: title
+    fields:
+      - { label: "Nom de l'équipe", name: "title", widget: "string" }
+      - { label: "Catégorie / poule", name: "categorie", widget: "string" }
+      - { label: "Photo d'équipe", name: "photo", widget: "image", required: false }
+      - { label: "Présentation (optionnel)", name: "body", widget: "markdown", required: false }
+      - label: "Membres"
+        name: "membres"
+        widget: "list"
+        required: false
+      - label: "Résultats"
+        name: "resultats"
+        widget: "list"
+        required: false
+        fields:
+          - { label: "Date", name: "date", widget: "datetime" }
+          - { label: "Adversaire", name: "adversaire", widget: "string" }
+          - { label: "Lieu", name: "lieu", widget: "select", options: ["Domicile", "Extérieur"] }
+          - { label: "Score", name: "score", widget: "string" }
+          - { label: "Résultat", name: "resultat", widget: "select", options: ["Victoire", "Défaite", "Match nul"] }
