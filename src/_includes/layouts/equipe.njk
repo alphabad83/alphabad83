@@ -15,9 +15,12 @@ layout: layouts/base.njk
 
   {% if membres and membres.length > 0 %}
   <h2 style="font-size:1.5rem;margin-top:2.5rem">Effectif</h2>
-  <div class="villages-map">
+  <div class="grid grid--2">
     {% for m in membres %}
-    <span>{{ m }}</span>
+    <div class="card">
+      {% if m.role %}<p class="membre__role">{{ m.role }}</p>{% endif %}
+      <h3 style="text-transform:none;letter-spacing:0;font-size:1.15rem;margin-bottom:0">{{ m.nom }}</h3>
+    </div>
     {% endfor %}
   </div>
   {% endif %}
