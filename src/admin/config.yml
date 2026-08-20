@@ -46,14 +46,13 @@ collections:
         label: "Bureau / comité"
         file: "src/_data/bureau.json"
         fields:
-          - label: "Membres"
-            name: "membres"
-            widget: "list"
-            fields:
-              - { label: "Nom", name: "nom", widget: "string" }
-              - { label: "Rôle", name: "role", widget: "string" }
-              - { label: "Photo", name: "photo", widget: "image", required: false }
-              - { label: "E-mail", name: "email", widget: "string", required: false }
+               - label: "Membres"
+        name: "membres"
+        widget: "list"
+        required: false
+        fields:
+          - { label: "Nom", name: "nom", widget: "string" }
+          - { label: "Fonction (ex. Capitaine, Joueur)", name: "role", widget: "string", required: false }
 
       - name: "creneaux"
         label: "Créneaux d'entraînement"
