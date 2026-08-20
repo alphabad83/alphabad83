@@ -1,17 +1,14 @@
 ---
-title: "Reprise des entraînements pour la nouvelle saison"
-date: 2026-09-01
-resume: "Les créneaux reprennent début septembre dans les quatre gymnases du canton, avec une séance découverte offerte."
+title: Reprise des entraînements pour la nouvelle saison
+date: 2026-08-20T14:19:00.000+02:00
+resume: "Les créneaux reprennent début septembre dans les 2 gymnases, avec de
+  nouveaux créneaux. "
 ---
-
-La nouvelle saison démarre début septembre ! Tous les créneaux habituels reprennent, avec un accueil particulier pour les nouveaux joueurs et joueuses.
+La nouvelle saison démarre début septembre ! 
 
 ## Ce qui change cette saison
 
-- Un nouveau créneau le samedi matin à Callian pour les niveaux loisir
-- Un partenariat renouvelé avec le comité départemental du Var pour l'encadrement jeunes
-- Une séance découverte gratuite, raquette prêtée sur place, sur simple présentation
+* Un nouveau créneau le samedi soir à Fayence pour le jeu libre
+* Changement d'oganisation pour le créneau du jeudi soir 
 
-## Comment venir essayer
-
-Présentez-vous directement à l'un des créneaux listés sur la page [Créneaux & tarifs](/creneaux-tarifs/), aucune inscription préalable n'est nécessaire pour la séance découverte.
+![](/images/uploads/image-1-.png)
