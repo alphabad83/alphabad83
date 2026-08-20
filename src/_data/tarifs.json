@@ -1,24 +1,14 @@
 {
   "items": [
     {
-      "categorie": "Adultes",
-      "prix": "95 €",
-      "detail": "Licence FFBaD incluse, accès à tous les créneaux loisir"
+      "categorie": "Entraînements - Compétiteurs",
+      "prix": "150 €",
+      "detail": "Entraînement compris"
     },
     {
-      "categorie": "Jeunes (- 18 ans)",
-      "prix": "70 €",
-      "detail": "Licence FFBaD incluse, créneaux jeunes encadrés"
-    },
-    {
-      "categorie": "Compétiteurs",
-      "prix": "120 €",
-      "detail": "Licence FFBaD + engagement en interclubs départementaux"
-    },
-    {
-      "categorie": "Séance découverte",
-      "prix": "Gratuite",
-      "detail": "Une séance d'essai offerte, raquette prêtée sur place"
+      "categorie": "Loisirs",
+      "prix": "115 €",
+      "detail": "Accès aux créneaux \"Jeu libre\""
     }
   ]
 }
