@@ -1,6 +1,7 @@
 ---
 title: Equipe 1
 categorie: D2
+photo: /images/uploads/capture-d-écran-2026-08-20-152728.png
 membres:
   - nom: MR X
     role: Capitaine
