@@ -22,6 +22,7 @@ collections:
         file: "src/_data/club.json"
         fields:
           - { label: "Nom du club", name: "nom", widget: "string" }
+          - { label: "Logo (image carrée de préférence)", name: "logo", widget: "image", required: false }
           - { label: "Nom complet (association)", name: "nomLong", widget: "string" }
           - { label: "Accroche", name: "accroche", widget: "string" }
           - { label: "Description courte (page d'accueil)", name: "descriptionCourte", widget: "text" }
