@@ -1,0 +1,32 @@
+---
+layout: layouts/base.njk
+title: Équipes
+permalink: /equipes/
+---
+<section class="hero" style="padding-bottom:3.5rem">
+  <div class="wrap">
+    <p class="eyebrow hero__eyebrow">Compétition</p>
+    <h1 class="hero__title">Nos équipes d'interclubs</h1>
+    <p class="hero__lead">Les équipes engagées cette saison dans les championnats du Var.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    {% if collections.equipes.length > 0 %}
+    <div class="grid grid--3">
+      {% for e in collections.equipes %}
+      <a class="card post-card" href="{{ e.url }}">
+        {% if e.data.photo %}
+        <img src="{{ e.data.photo }}" alt="" loading="lazy" style="margin-bottom:1rem;border-radius:2px;aspect-ratio:4/3;object-fit:cover">
+        {% endif %}
+        <p class="post-card__date">{{ e.data.categorie }}</p>
+        <h3>{{ e.data.title }}</h3>
+      </a>
+      {% endfor %}
+    </div>
+    {% else %}
+    <p>Aucune équipe publiée pour le moment.</p>
+    {% endif %}
+  </div>
+</section>
