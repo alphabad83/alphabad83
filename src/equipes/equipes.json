@@ -1,0 +1,4 @@
+{
+  "layout": "layouts/equipe.njk",
+  "tags": "equipes"
+}
