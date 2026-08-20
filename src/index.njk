@@ -20,17 +20,11 @@ permalink: /
         <a href="/creneaux-tarifs/" class="btn btn--ghost">Voir les créneaux</a>
       </div>
     </div>
-    <div class="hero__trajectory">
-      <svg viewBox="0 0 400 400" width="100%" height="100%">
-        <path d="M40,360 C120,120 280,60 370,40" fill="none" stroke="#D7E24C" stroke-width="2.5" stroke-dasharray="6 8"/>
-        <circle cx="40" cy="360" r="6" fill="#F8F4EA"/>
-        <g transform="translate(370,40)">
-          <circle r="16" fill="#F8F4EA"/>
-          <path d="M0,-16 L-9,-30 M0,-16 L9,-30 M0,-16 L-13,-24 M0,-16 L13,-24" stroke="#A83E1D" stroke-width="2"/>
-        </g>
-        <text x="20" y="390" fill="#F8F4EA" font-family="JetBrains Mono" font-size="11" opacity="0.6">SMASH</text>
-      </svg>
-    </div>
+       <div class="hero__trajectory" style="display:flex;align-items:center;justify-content:center">
+     {% if club.logo %}
+       <img src="{{ club.logo }}" alt="Logo {{ club.nom }}" style="max-width:70%;max-height:70%;object-fit:contain">
+     {% endif %}
+   </div>
   </div>
 </section>
 
