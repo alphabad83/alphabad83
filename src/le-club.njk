@@ -11,6 +11,14 @@ permalink: /le-club/
   </div>
 </section>
 
+{% if club.photoLeClub %}
+<section class="section" style="padding-bottom:0">
+  <div class="wrap">
+    <img src="{{ club.photoLeClub }}" alt="" style="width:100%;max-height:420px;object-fit:cover;border-radius:2px">
+  </div>
+</section>
+{% endif %}
+
 <section class="section">
   <div class="wrap grid grid--2" style="align-items:start">
     <div>
