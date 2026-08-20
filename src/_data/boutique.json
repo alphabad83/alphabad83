@@ -1,27 +1,19 @@
 {
   "produits": [
     {
-      "nom": "Tube de 3 volants plume",
-      "description": "Volants en plume, qualité entraînement, le tube de 3.",
-      "prixAffiche": "18 €",
+      "nom": "Tube Victor Carbone ",
+      "description": "Volants en carbone, qualité entraînement.",
+      "prixAffiche": "17 € (prix réservé adhérents)",
       "stripePriceId": "",
-      "image": "/images/produit-placeholder.svg",
+      "image": "/images/uploads/capture-d-écran-2026-08-20-142551.png",
       "disponible": false
     },
     {
-      "nom": "Cordage raquette",
-      "description": "Cordage et tension au choix, pose sous une semaine.",
-      "prixAffiche": "15 €",
+      "nom": "Tube Forza 5000",
+      "description": "Volants en plume, qualité tournois.",
+      "prixAffiche": "19 € (prix réservé adhérents)",
       "stripePriceId": "",
-      "image": "/images/produit-placeholder.svg",
-      "disponible": false
-    },
-    {
-      "nom": "Maillot du club",
-      "description": "Maillot officiel Alphabad 83, toutes tailles.",
-      "prixAffiche": "25 €",
-      "stripePriceId": "",
-      "image": "/images/produit-placeholder.svg",
+      "image": "/images/uploads/capture-d-écran-2026-08-20-142747.png",
       "disponible": false
     }
   ]
