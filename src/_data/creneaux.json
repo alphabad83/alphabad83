@@ -27,6 +27,13 @@
       "lieu": "Gymnase Marie Mauron",
       "public": "Jeu libre - 3 terrains",
       "commune": "FAYENCE"
+    },
+    {
+      "jour": "Samedi",
+      "horaire": "18h00 - 23h00",
+      "lieu": "Gymnase Marie Mauron",
+      "public": "Jeu libre - 7 terrains",
+      "commune": "Fayence"
     }
   ]
 }
