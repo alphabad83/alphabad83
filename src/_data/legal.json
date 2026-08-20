@@ -1,16 +1,16 @@
 {
-  "denominationAssociation": "Alphabad 83 - Association de badminton du Canton de Fayence",
-  "formeJuridique": "Association loi du 1er juillet 1901",
-  "siegeSocial": "Salle omnisports, Chemin des Sports, 83440 Fayence",
-  "numeroRna": "W83XXXXXXX (à compléter — récépissé préfecture)",
-  "siret": "",
-  "nomRepresentantLegal": "Prénom Nom, présidente",
-  "emailContact": "contact@alphabad83.fr",
-  "hebergeurNom": "Netlify, Inc.",
   "hebergeurAdresse": "44 Montgomery Street, Suite 300, San Francisco, California 94104, États-Unis",
-  "hebergeurSite": "https://www.netlify.com",
-  "prestatairePaiement": "Stripe Payments Europe, Ltd.",
-  "delaiRemiseArticles": "sous 15 jours, en main propre lors d'un entraînement du club",
+  "emailContact": "alphabad.minton@orange.fr",
   "medateurNom": "",
-  "medateurSite": ""
+  "numeroRna": "W831001143",
+  "medateurSite": "",
+  "siret": "50842382900037",
+  "nomRepresentantLegal": "DEVEZE Corine, Présidente",
+  "delaiRemiseArticles": "Sous 15 jours, en main propre lors d'un entraînement du club",
+  "hebergeurSite": "https://www.netlify.com",
+  "formeJuridique": "Association loi du 1er juillet 1901",
+  "siegeSocial": "1849 RD 19 - CS80106 Mas de Tassy, 83440 TOURETTES",
+  "denominationAssociation": "Alphabad 83 - Association de badminton du Canton de Fayence",
+  "prestatairePaiement": "Stripe Payments Europe, Ltd.",
+  "hebergeurNom": "Netlify, Inc."
 }
